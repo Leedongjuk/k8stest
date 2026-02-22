@@ -1,0 +1,11 @@
+﻿{
+  "agentId": 3,
+  "agentName": "ekstest",
+  "poolId": 1,
+  "poolName": "Default",
+  "serverUrl": "https://pipelinesghubeus22.actions.githubusercontent.com/1XVLR15AmAwLW8EnmemgNUMjM6v2tV3RNDxCatJ3ZH70faMCJi/",
+  "gitHubUrl": "https://github.com/Leedongjuk/k8stest",
+  "workFolder": "_work",
+  "useV2Flow": true,
+  "serverUrlV2": "https://broker.actions.githubusercontent.com/"
+}

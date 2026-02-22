@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dong-web
+  namespace: dong
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dong-web
+  template:
+    metadata:
+      labels:
+        app: dong-web
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.25
+        ports:
+        - name: http
+          containerPort: 80
+        volumeMounts:
+        - name: nginx-conf
+          mountPath: /etc/nginx/conf.d/default.conf
+          subPath: default.conf
+      volumes:
+      - name: nginx-conf
+        configMap:
+          name: nginx-conf

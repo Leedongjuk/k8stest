@@ -1,0 +1,257 @@
+[2026-02-22 04:57:52Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-22 04:57:52Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials'
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-22 04:57:52Z INFO HostContext] Well known config file 'Runner': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.runner'
+[2026-02-22 04:57:52Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2026-02-22 04:57:52Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.26100.
+[2026-02-22 04:57:52Z INFO Listener] Version: 2.331.0
+[2026-02-22 04:57:52Z INFO Listener] Commit: 39f6c643d3032f8795fa71f1482731ca90c8e038
+[2026-02-22 04:57:52Z INFO Listener] Culture: ko-KR
+[2026-02-22 04:57:52Z INFO Listener] UI Culture: ko-KR
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-22 04:57:52Z INFO Listener] Validating directory permissions for: 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-22 04:57:52Z INFO CommandLineParser] Parse
+[2026-02-22 04:57:52Z INFO CommandLineParser] Parsing 1 args
+[2026-02-22 04:57:52Z INFO CommandLineParser] parsing argument
+[2026-02-22 04:57:52Z INFO CommandLineParser] HasArgs: False
+[2026-02-22 04:57:52Z INFO CommandLineParser] Adding Command: run
+[2026-02-22 04:57:52Z INFO Listener] Arguments parsed
+[2026-02-22 04:57:52Z INFO Runner] ExecuteCommand
+[2026-02-22 04:57:52Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin\Runner.Listener.dll
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-22 04:57:52Z INFO ConfigurationStore] binPath: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-22 04:57:52Z INFO ConfigurationStore] RootFolder: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-22 04:57:52Z INFO HostContext] Well known config file 'Runner': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.runner'
+[2026-02-22 04:57:52Z INFO ConfigurationStore] ConfigFilePath: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.runner
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-22 04:57:52Z INFO HostContext] Well known config file 'MigratedRunner': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.runner_migrated'
+[2026-02-22 04:57:52Z INFO ConfigurationStore] MigratedConfigFilePath: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.runner_migrated
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-22 04:57:52Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials'
+[2026-02-22 04:57:52Z INFO ConfigurationStore] CredFilePath: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-22 04:57:52Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_migrated'
+[2026-02-22 04:57:52Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_migrated
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-22 04:57:52Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-22 04:57:52Z INFO HostContext] Well known config file 'Service': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.service'
+[2026-02-22 04:57:52Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.service
+[2026-02-22 04:57:52Z INFO CommandSettings] Flag 'help': 'False'
+[2026-02-22 04:57:52Z INFO CommandSettings] Flag 'version': 'False'
+[2026-02-22 04:57:52Z INFO CommandSettings] Flag 'commit': 'False'
+[2026-02-22 04:57:52Z INFO CommandSettings] Flag 'check': 'False'
+[2026-02-22 04:57:53Z INFO CommandSettings] Command 'configure': 'False'
+[2026-02-22 04:57:53Z INFO CommandSettings] Command 'remove': 'False'
+[2026-02-22 04:57:53Z INFO CommandSettings] Command 'warmup': 'False'
+[2026-02-22 04:57:53Z INFO ConfigurationManager] LoadSettings
+[2026-02-22 04:57:53Z INFO ConfigurationStore] IsConfigured()
+[2026-02-22 04:57:53Z INFO ConfigurationStore] IsConfigured: True
+[2026-02-22 04:57:53Z INFO ConfigurationManager] Is configured: True
+[2026-02-22 04:57:53Z INFO ConfigurationStore] Read setting file: 389 chars
+[2026-02-22 04:57:53Z INFO ConfigurationManager] Settings Loaded
+[2026-02-22 04:57:53Z INFO ConfigurationStore] IsServiceConfigured()
+[2026-02-22 04:57:53Z INFO ConfigurationStore] IsServiceConfigured: False
+[2026-02-22 04:57:53Z INFO CommandSettings] Command 'run': 'True'
+[2026-02-22 04:57:53Z INFO ConfigurationStore] IsConfigured()
+[2026-02-22 04:57:53Z INFO ConfigurationStore] IsConfigured: True
+[2026-02-22 04:57:53Z INFO ConfigurationManager] Is configured: True
+[2026-02-22 04:57:53Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2026-02-22 04:57:53Z INFO Runner] Set runner startup type - Manual
+[2026-02-22 04:57:53Z INFO CommandSettings] Flag 'once': 'False'
+[2026-02-22 04:57:53Z INFO CommandSettings] Flag 'once': 'False'
+[2026-02-22 04:57:53Z INFO Runner] RunAsync
+[2026-02-22 04:57:53Z INFO ConfigurationManager] LoadMigratedSettings
+[2026-02-22 04:57:53Z INFO ConfigurationStore] IsMigratedConfigured()
+[2026-02-22 04:57:53Z INFO ConfigurationStore] IsMigratedConfigured: True
+[2026-02-22 04:57:53Z INFO ConfigurationStore] Read migrated setting file: 389 chars
+[2026-02-22 04:57:53Z INFO ConfigurationManager] Migrated Settings Loaded
+[2026-02-22 04:57:53Z INFO Runner] Loaded migrated settings from .runner_migrated file
+[2026-02-22 04:57:53Z INFO Runner] {
+  "AgentId": 3,
+  "AgentName": "ekstest",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelinesghubeus22.actions.githubusercontent.com/1XVLR15AmAwLW8EnmemgNUMjM6v2tV3RNDxCatJ3ZH70faMCJi/",
+  "GitHubUrl": "https://github.com/Leedongjuk/k8stest",
+  "WorkFolder": "_work",
+  "UseV2Flow": true,
+  "ServerUrlV2": "https://broker.actions.githubusercontent.com/"
+}
+[2026-02-22 04:57:53Z INFO Runner] Attempting to create session using migrated settings
+[2026-02-22 04:57:53Z INFO Runner] Using BrokerMessageListener
+[2026-02-22 04:57:53Z INFO BrokerMessageListener] Using provided settings
+[2026-02-22 04:57:53Z INFO BrokerMessageListener] Using migrated settings from .runner_migrated
+[2026-02-22 04:57:53Z INFO BrokerMessageListener] {
+  "AgentId": 3,
+  "AgentName": "ekstest",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelinesghubeus22.actions.githubusercontent.com/1XVLR15AmAwLW8EnmemgNUMjM6v2tV3RNDxCatJ3ZH70faMCJi/",
+  "GitHubUrl": "https://github.com/Leedongjuk/k8stest",
+  "WorkFolder": "_work",
+  "UseV2Flow": true,
+  "ServerUrlV2": "https://broker.actions.githubusercontent.com/"
+}
+[2026-02-22 04:57:53Z INFO BrokerMessageListener] Loading Credentials
+[2026-02-22 04:57:53Z INFO ConfigurationStore] HasCredentials()
+[2026-02-22 04:57:53Z INFO ConfigurationStore] stored True
+[2026-02-22 04:57:53Z INFO CredentialManager] GetCredentialProvider
+[2026-02-22 04:57:53Z INFO CredentialManager] Creating type OAuth
+[2026-02-22 04:57:53Z INFO CredentialManager] Creating credential type: OAuth
+[2026-02-22 04:57:53Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-22 04:57:53Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-22 04:57:53Z INFO HostContext] Well known config file 'RSACredentials': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams'
+[2026-02-22 04:57:53Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 04:57:53Z INFO BrokerMessageListener] Attempt to create session.
+[2026-02-22 04:57:53Z INFO BrokerMessageListener] Connecting to the Broker Server...
+[2026-02-22 04:57:53Z INFO ConfigurationStore] HasCredentials()
+[2026-02-22 04:57:53Z INFO ConfigurationStore] stored True
+[2026-02-22 04:57:53Z INFO CredentialManager] GetCredentialProvider
+[2026-02-22 04:57:53Z INFO CredentialManager] Creating type OAuth
+[2026-02-22 04:57:53Z INFO CredentialManager] Creating credential type: OAuth
+[2026-02-22 04:57:53Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 04:57:53Z INFO BrokerMessageListener] VssConnection created
+[2026-02-22 04:57:53Z INFO BrokerMessageListener] Connecting to the Runner server...
+[2026-02-22 04:57:53Z INFO RunnerServer] EstablishVssConnection
+[2026-02-22 04:57:53Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2026-02-22 04:57:53Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2026-02-22 04:57:53Z INFO RunnerServer] EstablishVssConnection
+[2026-02-22 04:57:53Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2026-02-22 04:57:53Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2026-02-22 04:57:53Z INFO RunnerServer] EstablishVssConnection
+[2026-02-22 04:57:53Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2026-02-22 04:57:53Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2026-02-22 04:57:54Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2026-02-22 04:57:54Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2026-02-22 04:57:54Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2026-02-22 04:57:55Z INFO BrokerMessageListener] VssConnection created
+[2026-02-22 04:57:55Z INFO Terminal] WRITE LINE: 
+[2026-02-22 04:57:55Z INFO Terminal] WRITE LINE: 
+[2026-02-22 04:57:55Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 04:57:55Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 04:57:56Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2026-02-22 04:57:56Z INFO BrokerMessageListener] Session created.
+[2026-02-22 04:57:56Z INFO Runner] Successfully created session with migrated settings
+[2026-02-22 04:57:56Z INFO Terminal] WRITE LINE: Current runner version: '2.331.0'
+[2026-02-22 04:57:56Z INFO Terminal] WRITE LINE: 2026-02-22 04:57:56Z: Listening for Jobs
+[2026-02-22 04:57:56Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2026-02-22 04:58:29Z INFO Runner] Received RunnerRefreshConfigMessage for 'runner' config file
+[2026-02-22 04:58:29Z INFO RunnerConfigUpdater] Verifying runner qualified id: U_kgDOBS8GHA/R_kgDORKzNLg/self-hosted/3
+[2026-02-22 04:58:29Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-22 04:58:29Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-22 04:58:29Z INFO HostContext] Well known config file 'Runner': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.runner'
+[2026-02-22 04:58:30Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 04:58:30Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 04:58:30Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2026-02-22 04:58:31Z INFO ConfigurationStore] Saving runner migrated settings
+[2026-02-22 04:58:31Z INFO ConfigurationStore] Delete exist runner migrated settings file.
+[2026-02-22 04:58:31Z INFO ConfigurationStore] Migrated Settings Saved.
+[2026-02-22 04:58:31Z INFO Runner] Runner configuration was updated. Session restart has been scheduled
+[2026-02-22 04:58:31Z INFO Runner] Pending session restart detected and job dispatcher is not busy. Restarting session now.
+[2026-02-22 04:58:31Z INFO JobDispatcher] Shutting down JobDispatcher. Make sure all WorkerDispatcher has finished.
+[2026-02-22 04:58:31Z INFO Runner] Deleting Runner Session...
+[2026-02-22 04:58:31Z INFO Runner] Restarting runner session after config update...
+[2026-02-22 04:58:31Z INFO Runner] Runner configuration was refreshed, restarting session...
+[2026-02-22 04:58:31Z INFO ConfigurationManager] LoadSettings
+[2026-02-22 04:58:31Z INFO ConfigurationStore] IsConfigured()
+[2026-02-22 04:58:31Z INFO ConfigurationStore] IsConfigured: True
+[2026-02-22 04:58:31Z INFO ConfigurationManager] Is configured: True
+[2026-02-22 04:58:31Z INFO ConfigurationManager] Settings Loaded
+[2026-02-22 04:58:31Z INFO Runner] RunAsync
+[2026-02-22 04:58:31Z INFO ConfigurationManager] LoadMigratedSettings
+[2026-02-22 04:58:31Z INFO ConfigurationStore] IsMigratedConfigured()
+[2026-02-22 04:58:31Z INFO ConfigurationStore] IsMigratedConfigured: True
+[2026-02-22 04:58:31Z INFO ConfigurationManager] Migrated Settings Loaded
+[2026-02-22 04:58:31Z INFO Runner] Loaded migrated settings from .runner_migrated file
+[2026-02-22 04:58:31Z INFO Runner] {
+  "AgentId": 3,
+  "AgentName": "ekstest",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelinesghubeus22.actions.githubusercontent.com/1XVLR15AmAwLW8EnmemgNUMjM6v2tV3RNDxCatJ3ZH70faMCJi/",
+  "GitHubUrl": "https://github.com/Leedongjuk/k8stest",
+  "WorkFolder": "_work",
+  "UseV2Flow": true,
+  "ServerUrlV2": "https://broker.actions.githubusercontent.com/"
+}
+[2026-02-22 04:58:31Z INFO Runner] Attempting to create session using migrated settings
+[2026-02-22 04:58:31Z INFO Runner] Using BrokerMessageListener
+[2026-02-22 04:58:31Z INFO BrokerMessageListener] Using provided settings
+[2026-02-22 04:58:31Z INFO BrokerMessageListener] Using migrated settings from .runner_migrated
+[2026-02-22 04:58:31Z INFO BrokerMessageListener] {
+  "AgentId": 3,
+  "AgentName": "ekstest",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelinesghubeus22.actions.githubusercontent.com/1XVLR15AmAwLW8EnmemgNUMjM6v2tV3RNDxCatJ3ZH70faMCJi/",
+  "GitHubUrl": "https://github.com/Leedongjuk/k8stest",
+  "WorkFolder": "_work",
+  "UseV2Flow": true,
+  "ServerUrlV2": "https://broker.actions.githubusercontent.com/"
+}
+[2026-02-22 04:58:31Z INFO BrokerMessageListener] Loading Credentials
+[2026-02-22 04:58:31Z INFO ConfigurationStore] HasCredentials()
+[2026-02-22 04:58:31Z INFO ConfigurationStore] stored True
+[2026-02-22 04:58:31Z INFO CredentialManager] GetCredentialProvider
+[2026-02-22 04:58:31Z INFO CredentialManager] Creating type OAuth
+[2026-02-22 04:58:31Z INFO CredentialManager] Creating credential type: OAuth
+[2026-02-22 04:58:31Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 04:58:31Z INFO BrokerMessageListener] Attempt to create session.
+[2026-02-22 04:58:31Z INFO BrokerMessageListener] Connecting to the Broker Server...
+[2026-02-22 04:58:31Z INFO ConfigurationStore] HasCredentials()
+[2026-02-22 04:58:31Z INFO ConfigurationStore] stored True
+[2026-02-22 04:58:31Z INFO CredentialManager] GetCredentialProvider
+[2026-02-22 04:58:31Z INFO CredentialManager] Creating type OAuth
+[2026-02-22 04:58:31Z INFO CredentialManager] Creating credential type: OAuth
+[2026-02-22 04:58:31Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 04:58:31Z INFO BrokerMessageListener] VssConnection created
+[2026-02-22 04:58:31Z INFO BrokerMessageListener] Connecting to the Runner server...
+[2026-02-22 04:58:31Z INFO RunnerServer] EstablishVssConnection
+[2026-02-22 04:58:31Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2026-02-22 04:58:31Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2026-02-22 04:58:31Z INFO RunnerServer] EstablishVssConnection
+[2026-02-22 04:58:31Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2026-02-22 04:58:31Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2026-02-22 04:58:31Z INFO RunnerServer] EstablishVssConnection
+[2026-02-22 04:58:31Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2026-02-22 04:58:31Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2026-02-22 04:58:32Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2026-02-22 04:58:32Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2026-02-22 04:58:32Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2026-02-22 04:58:32Z INFO BrokerMessageListener] VssConnection created
+[2026-02-22 04:58:32Z INFO Terminal] WRITE LINE: 
+[2026-02-22 04:58:32Z INFO Terminal] WRITE LINE: 
+[2026-02-22 04:58:32Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 04:58:32Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 04:58:33Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2026-02-22 04:58:33Z INFO BrokerMessageListener] Session created.
+[2026-02-22 04:58:33Z INFO Runner] Successfully created session with migrated settings
+[2026-02-22 04:58:33Z INFO Terminal] WRITE LINE: Current runner version: '2.331.0'
+[2026-02-22 04:58:33Z INFO Terminal] WRITE LINE: 2026-02-22 04:58:33Z: Listening for Jobs
+[2026-02-22 04:58:33Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2026-02-22 05:48:47Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 05:48:48Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2026-02-22 06:39:05Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 06:39:06Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2026-02-22 07:29:26Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 07:29:27Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2026-02-22 08:19:43Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 08:19:44Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2026-02-22 09:09:58Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 09:09:59Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2026-02-22 10:37:47Z WARN GitHubActionsService] Attempt 1 of GET request to https://broker.actions.githubusercontent.com/message?sessionId=7d5a1dc4-1d45-4356-9cc5-0c6ab71acf93&status=Online&runnerVersion=2.331.0&os=Windows&architecture=X64&disableUpdate=false failed (Socket Error: ConnectionReset). The operation will be retried in 10.929 seconds.
+[2026-02-22 10:38:00Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 10:38:01Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2026-02-22 11:28:17Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-22 11:28:18Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown

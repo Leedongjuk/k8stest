@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dong-was
+  namespace: dong
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dong-was
+  template:
+    metadata:
+      labels:
+        app: dong-was
+    spec:
+      containers:
+      - name: dong-was
+        image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:(IMAGE_TAG)
+        ports:
+        - name: http
+          containerPort: 8080
+        envFrom:
+        - configMapRef:
+            name: was-config
+        env:
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secret
+              key: MYSQL_DATABASE
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secret
+              key: MYSQL_USER
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secret
+              key: MYSQL_PASSWORD

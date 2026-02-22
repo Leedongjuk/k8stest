@@ -1,0 +1,94 @@
+[2026-02-15 07:48:41Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-15 07:48:41Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials'
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-15 07:48:41Z INFO HostContext] Well known config file 'Runner': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.runner'
+[2026-02-15 07:48:41Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2026-02-15 07:48:41Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.26100.
+[2026-02-15 07:48:41Z INFO Listener] Version: 2.331.0
+[2026-02-15 07:48:41Z INFO Listener] Commit: 39f6c643d3032f8795fa71f1482731ca90c8e038
+[2026-02-15 07:48:41Z INFO Listener] Culture: ko-KR
+[2026-02-15 07:48:41Z INFO Listener] UI Culture: ko-KR
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-15 07:48:41Z INFO Listener] Validating directory permissions for: 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-15 07:48:41Z INFO CommandLineParser] Parse
+[2026-02-15 07:48:41Z INFO CommandLineParser] Parsing 1 args
+[2026-02-15 07:48:41Z INFO CommandLineParser] parsing argument
+[2026-02-15 07:48:41Z INFO CommandLineParser] HasArgs: False
+[2026-02-15 07:48:41Z INFO CommandLineParser] Adding Command: remove
+[2026-02-15 07:48:41Z INFO Listener] Arguments parsed
+[2026-02-15 07:48:41Z INFO Runner] ExecuteCommand
+[2026-02-15 07:48:41Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin\Runner.Listener.dll
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-15 07:48:41Z INFO ConfigurationStore] binPath: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-15 07:48:41Z INFO ConfigurationStore] RootFolder: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-15 07:48:41Z INFO HostContext] Well known config file 'Runner': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.runner'
+[2026-02-15 07:48:41Z INFO ConfigurationStore] ConfigFilePath: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.runner
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-15 07:48:41Z INFO HostContext] Well known config file 'MigratedRunner': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.runner_migrated'
+[2026-02-15 07:48:41Z INFO ConfigurationStore] MigratedConfigFilePath: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.runner_migrated
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-15 07:48:41Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials'
+[2026-02-15 07:48:41Z INFO ConfigurationStore] CredFilePath: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-15 07:48:41Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_migrated'
+[2026-02-15 07:48:41Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_migrated
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-15 07:48:41Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-15 07:48:41Z INFO HostContext] Well known config file 'Service': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.service'
+[2026-02-15 07:48:41Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.service
+[2026-02-15 07:48:41Z INFO CommandSettings] Flag 'help': 'False'
+[2026-02-15 07:48:41Z INFO CommandSettings] Flag 'version': 'False'
+[2026-02-15 07:48:41Z INFO CommandSettings] Flag 'commit': 'False'
+[2026-02-15 07:48:41Z INFO CommandSettings] Flag 'check': 'False'
+[2026-02-15 07:48:41Z INFO CommandSettings] Command 'configure': 'False'
+[2026-02-15 07:48:41Z INFO CommandSettings] Command 'remove': 'True'
+[2026-02-15 07:48:41Z INFO CommandSettings] Flag 'local': 'False'
+[2026-02-15 07:48:41Z INFO ConfigurationStore] IsServiceConfigured()
+[2026-02-15 07:48:41Z INFO ConfigurationStore] IsServiceConfigured: False
+[2026-02-15 07:48:41Z INFO ConfigurationStore] IsConfigured()
+[2026-02-15 07:48:41Z INFO ConfigurationStore] IsConfigured: True
+[2026-02-15 07:48:41Z INFO ConfigurationStore] HasCredentials()
+[2026-02-15 07:48:41Z INFO ConfigurationStore] stored True
+[2026-02-15 07:48:41Z INFO ConfigurationStore] Read setting file: 399 chars
+[2026-02-15 07:48:41Z INFO CommandSettings] Arg 'token': ''
+[2026-02-15 07:48:41Z INFO CommandSettings] Flag 'unattended': 'False'
+[2026-02-15 07:48:41Z INFO PromptManager] ReadValue
+[2026-02-15 07:48:41Z INFO Terminal] WRITE: Enter runner remove token: 
+[2026-02-15 07:48:41Z INFO Terminal] READ SECRET
+[2026-02-15 07:48:59Z INFO Terminal] Read value: '***'
+[2026-02-15 07:49:00Z INFO ConfigurationManager] Http response code: OK from 'POST https://api.github.com/actions/runner-registration' (C7EB:F46E2:7F36DA:B8B781:69917A6C)
+[2026-02-15 07:49:00Z INFO ConfigurationManager] cred retrieved via GitHub auth
+[2026-02-15 07:49:00Z INFO RunnerServer] EstablishVssConnection
+[2026-02-15 07:49:00Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2026-02-15 07:49:00Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2026-02-15 07:49:00Z INFO RunnerServer] EstablishVssConnection
+[2026-02-15 07:49:00Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2026-02-15 07:49:00Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2026-02-15 07:49:00Z INFO RunnerServer] EstablishVssConnection
+[2026-02-15 07:49:00Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2026-02-15 07:49:00Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2026-02-15 07:49:01Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2026-02-15 07:49:01Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2026-02-15 07:49:01Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2026-02-15 07:49:02Z INFO Terminal] WRITE LINE: 
+[2026-02-15 07:49:02Z INFO ConfigurationStore] IsConfigured()
+[2026-02-15 07:49:02Z INFO ConfigurationStore] IsConfigured: True
+[2026-02-15 07:49:02Z INFO ConfigurationStore] HasCredentials()
+[2026-02-15 07:49:02Z INFO ConfigurationStore] stored True
+[2026-02-15 07:49:02Z INFO HostContext] Well known directory 'Bin': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\bin'
+[2026-02-15 07:49:02Z INFO HostContext] Well known directory 'Root': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner'
+[2026-02-15 07:49:02Z INFO HostContext] Well known config file 'RSACredentials': 'C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams'
+[2026-02-15 07:49:02Z INFO RSAEncryptedFileKeyManager] Deleting RSA key parameters file C:\Users\pc\OneDrive\Desktop\동원이\test\k8stest\actions-runner\.credentials_rsaparams
+[2026-02-15 07:49:02Z INFO Terminal] WRITE LINE: 
+[2026-02-15 07:49:02Z INFO Listener] Runner execution has finished with return code 0
