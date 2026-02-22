@@ -11,7 +11,7 @@ resources:
 
   - was/was-deployment.yaml
   - was/was-service.yaml
-  - was/configmap.yaml
+  - was/was-configmap.yaml
 
   - web/nginx-configmap.yaml
   - web/web-deployment.yaml
