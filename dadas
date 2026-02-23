@@ -1,0 +1,66 @@
+[33mcommit 72f737cc03d3a2a2d74ba41a45ec6ac29aa39675[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Leedongjuk <ddc3539@naver.com>
+Date:   Mon Feb 23 21:15:52 2026 +0900
+
+    fix workflow for windows runner powershell
+
+[1mdiff --git a/.github/workflows/build-push-gitops.yml b/.github/workflows/build-push-gitops.yml[m
+[1mindex 145a738..3e62405 100644[m
+[1m--- a/.github/workflows/build-push-gitops.yml[m
+[1m+++ b/.github/workflows/build-push-gitops.yml[m
+[36m@@ -17,41 +17,43 @@[m [mjobs:[m
+         uses: actions/checkout@v4[m
+ [m
+       - name: Set image tag (commit SHA)[m
+[31m-        shell: bash[m
+[32m+[m[32m        shell: powershell[m
+         run: |[m
+[31m-          echo "IMAGE_TAG=${GITHUB_SHA}" >> $GITHUB_ENV[m
+[32m+[m[32m          "IMAGE_TAG=$env:GITHUB_SHA" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append[m
+ [m
+       - name: Configure AWS credentials (Access Key)[m
+[31m-        shell: bash[m
+[32m+[m[32m        shell: powershell[m
+         run: |[m
+           aws configure set aws_access_key_id "${{ secrets.AWS_ACCESS_KEY_ID }}"[m
+           aws configure set aws_secret_access_key "${{ secrets.AWS_SECRET_ACCESS_KEY }}"[m
+           aws configure set default.region "ap-northeast-2"[m
+ [m
+       - name: Login to ECR[m
+[31m-        shell: bash[m
+[32m+[m[32m        shell: powershell[m
+         run: |[m
+           aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com[m
+ [m
+       - name: Build & Push image to ECR[m
+[31m-        shell: bash[m
+[32m+[m[32m        shell: powershell[m
+         run: |[m
+[31m-          docker build -f Dockerfile.dockerfile -t 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:${IMAGE_TAG} .[m
+[31m-          docker push 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:${IMAGE_TAG}[m
+[32m+[m[32m          docker build -f Dockerfile.dockerfile -t 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:$env:IMAGE_TAG .[m
+[32m+[m[32m          docker push 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:$env:IMAGE_TAG[m
+ [m
+[32m+[m[32m      # 필요하면 나중에 다시 켜자 (지금은 빌드/푸시 먼저 성공시키기)[m
+       # - name: Update manifest image tag (GitOps)[m
+       #   shell: powershell[m
+       #   run: |[m
+       #     $file = "apps/was/was-deployment.yaml"[m
+       #     $content = Get-Content $file -Raw[m
+[31m-      #     $new = $content -replace "(IMAGE_TAG)", "$env:IMAGE_TAG"[m
+[32m+[m[32m      #     $new = $content -replace "\(IMAGE_TAG\)", "$env:IMAGE_TAG"[m
+       #     Set-Content -Path $file -Value $new -NoNewline[m
+[31m-[m
+[32m+[m[32m      #[m
+       # - name: Commit & push manifest update[m
+[31m-      #   shell: bash[m
+[32m+[m[32m      #   shell: powershell[m
+       #   run: |[m
+       #     git config user.name "github-actions"[m
+       #     git config user.email "github-actions@users.noreply.github.com"[m
+       #     git add apps/was/was-deployment.yaml[m
+[31m-      #     git commit -m "chore(gitops): deploy ${IMAGE_TAG}" || echo "No changes to commit"[m
+[32m+[m[32m      #     git commit -m "chore(gitops): deploy $env:IMAGE_TAG"[m
+[32m+[m[32m      #     if ($LASTEXITCODE -ne 0) { Write-Host "No changes to commit" }[m
+       #     git push[m
+\ No newline at end of file[m

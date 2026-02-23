@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "Leedongjuk/k8stest",
+  "pipelineDirectory": "k8stest",
+  "workspaceDirectory": "k8stest\\k8stest",
+  "repositories": {
+    "Leedongjuk/k8stest": {
+      "repositoryPath": "k8stest\\k8stest",
+      "lastRunOn": "02/23/2026 20:46:52 +09:00"
+    }
+  },
+  "lastRunOn": "02/24/2026 00:34:35 +09:00"
+}
