@@ -17,41 +17,43 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Set image tag (commit SHA)
-        shell: bash
+        shell: powershell
         run: |
-          echo "IMAGE_TAG=${GITHUB_SHA}" >> $GITHUB_ENV
+          "IMAGE_TAG=$env:GITHUB_SHA" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
 
       - name: Configure AWS credentials (Access Key)
-        shell: bash
+        shell: powershell
         run: |
           aws configure set aws_access_key_id "${{ secrets.AWS_ACCESS_KEY_ID }}"
           aws configure set aws_secret_access_key "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
           aws configure set default.region "ap-northeast-2"
 
       - name: Login to ECR
-        shell: bash
+        shell: powershell
         run: |
           aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com
 
       - name: Build & Push image to ECR
-        shell: bash
+        shell: powershell
         run: |
-          docker build -f Dockerfile.dockerfile -t 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:${IMAGE_TAG} .
-          docker push 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:${IMAGE_TAG}
+          docker build -f Dockerfile.dockerfile -t 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:$env:IMAGE_TAG .
+          docker push 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:$env:IMAGE_TAG
 
+      # 필요하면 나중에 다시 켜자 (지금은 빌드/푸시 먼저 성공시키기)
       # - name: Update manifest image tag (GitOps)
       #   shell: powershell
       #   run: |
       #     $file = "apps/was/was-deployment.yaml"
       #     $content = Get-Content $file -Raw
-      #     $new = $content -replace "(IMAGE_TAG)", "$env:IMAGE_TAG"
+      #     $new = $content -replace "\(IMAGE_TAG\)", "$env:IMAGE_TAG"
       #     Set-Content -Path $file -Value $new -NoNewline
-
+      #
       # - name: Commit & push manifest update
-      #   shell: bash
+      #   shell: powershell
       #   run: |
       #     git config user.name "github-actions"
       #     git config user.email "github-actions@users.noreply.github.com"
       #     git add apps/was/was-deployment.yaml
-      #     git commit -m "chore(gitops): deploy ${IMAGE_TAG}" || echo "No changes to commit"
+      #     git commit -m "chore(gitops): deploy $env:IMAGE_TAG"
+      #     if ($LASTEXITCODE -ne 0) { Write-Host "No changes to commit" }
       #     git push
