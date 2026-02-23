@@ -40,20 +40,20 @@ jobs:
           docker push 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:$env:IMAGE_TAG
 
       # 필요하면 나중에 다시 켜자 (지금은 빌드/푸시 먼저 성공시키기)
-      # - name: Update manifest image tag (GitOps)
-      #   shell: powershell
-      #   run: |
-      #     $file = "apps/was/was-deployment.yaml"
-      #     $content = Get-Content $file -Raw
-      #     $new = $content -replace "\(IMAGE_TAG\)", "$env:IMAGE_TAG"
-      #     Set-Content -Path $file -Value $new -NoNewline
-      #
-      # - name: Commit & push manifest update
-      #   shell: powershell
-      #   run: |
-      #     git config user.name "github-actions"
-      #     git config user.email "github-actions@users.noreply.github.com"
-      #     git add apps/was/was-deployment.yaml
-      #     git commit -m "chore(gitops): deploy $env:IMAGE_TAG"
-      #     if ($LASTEXITCODE -ne 0) { Write-Host "No changes to commit" }
-      #     git push
+       - name: Update manifest image tag (GitOps)
+         shell: powershell
+         run: |
+           $file = "apps/was/was-deployment.yaml"
+           $content = Get-Content $file -Raw
+           $new = $content -replace "\(IMAGE_TAG\)", "$env:IMAGE_TAG"
+           Set-Content -Path $file -Value $new -NoNewline
+      
+       - name: Commit & push manifest update
+         shell: powershell
+         run: |
+           git config user.name "github-actions"
+           git config user.email "github-actions@users.noreply.github.com"
+           git add apps/was/was-deployment.yaml
+           git commit -m "chore(gitops): deploy $env:IMAGE_TAG"
+           if ($LASTEXITCODE -ne 0) { Write-Host "No changes to commit" }
+           git push
