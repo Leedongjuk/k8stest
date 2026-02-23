@@ -3,6 +3,7 @@ name: build-push-and-gitops
 on:
   push:
     branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -22,7 +23,7 @@ jobs:
 
       - name: Configure AWS credentials (Access Key)
         shell: bash
-        run: 
+        run: |
           aws configure set aws_access_key_id "${{ secrets.AWS_ACCESS_KEY_ID }}"
           aws configure set aws_secret_access_key "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
           aws configure set default.region "ap-northeast-2"
@@ -30,28 +31,27 @@ jobs:
       - name: Login to ECR
         shell: bash
         run: |
-          aws ecr get-login-password --region ap-northeast-2 \
-          | docker login --username AWS --password-stdin 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com
+          aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com
 
       - name: Build & Push image to ECR
         shell: bash
         run: |
-          docker build  -f Dockerfile.dockerfile -t 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:${IMAGE_TAG} .
+          docker build -f Dockerfile.dockerfile -t 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:${IMAGE_TAG} .
           docker push 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:${IMAGE_TAG}
 
-     # - name: Update manifest image tag (GitOps)
-      #  shell: powershell
-       # run: |
-        #  $file = "apps/was/was-deployment.yaml"
-         # $content = Get-Content $file -Raw
-          #$new = $content -replace "\(IMAGE_TAG\)", "$env:IMAGE_TAG"
-         # Set-Content -Path $file -Value $new -NoNewline
+      # - name: Update manifest image tag (GitOps)
+      #   shell: powershell
+      #   run: |
+      #     $file = "apps/was/was-deployment.yaml"
+      #     $content = Get-Content $file -Raw
+      #     $new = $content -replace "(IMAGE_TAG)", "$env:IMAGE_TAG"
+      #     Set-Content -Path $file -Value $new -NoNewline
 
-     # - name: Commit & push manifest update
-     #   shell: bash
-      #  run: |
-       #   git config user.name "github-actions"
-       #   git config user.email "github-actions@users.noreply.github.com"
-       #   git add apps/was/was-deployment.yaml
-       #   git commit -m "chore(gitops): deploy ${IMAGE_TAG}" || echo "No changes to commit"
-       #   git push
+      # - name: Commit & push manifest update
+      #   shell: bash
+      #   run: |
+      #     git config user.name "github-actions"
+      #     git config user.email "github-actions@users.noreply.github.com"
+      #     git add apps/was/was-deployment.yaml
+      #     git commit -m "chore(gitops): deploy ${IMAGE_TAG}" || echo "No changes to commit"
+      #     git push
