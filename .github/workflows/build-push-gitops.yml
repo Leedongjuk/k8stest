@@ -49,19 +49,19 @@ jobs:
           docker push $env:ECR_REGISTRY/${{ env.ECR_REPOSITORY }}:$env:IMAGE_TAG
 
       # 아래는 필요 시 다시 활성화
-      # - name: Update manifest image tag (GitOps)
-      #   shell: powershell
-      #   run: |
-      #     $file = "apps/was/was-deployment.yaml"
-      #     $content = Get-Content $file -Raw
-      #     $new = $content -replace "\(IMAGE_TAG\)", "$env:IMAGE_TAG"
-      #     Set-Content -Path $file -Value $new -NoNewline
-      #
-      # - name: Commit & push manifest update
-      #   shell: powershell
-      #   run: |
-      #     git config user.name "github-actions"
-      #     git config user.email "github-actions@users.noreply.github.com"
-      #     git add apps/was/was-deployment.yaml
-      #     git commit -m "chore(gitops): deploy $env:IMAGE_TAG"
-      #     git push
+      - name: Update manifest image tag (GitOps)
+        shell: powershell
+        run: |
+          $file = "apps/was/was-deployment.yaml"
+          $content = Get-Content $file -Raw
+          $new = $content -replace "\(IMAGE_TAG\)", "$env:IMAGE_TAG"
+          Set-Content -Path $file -Value $new -NoNewline
+      
+      - name: Commit & push manifest update
+        shell: powershell
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add apps/was/was-deployment.yaml
+          git commit -m "chore(gitops): deploy $env:IMAGE_TAG"
+          git push
