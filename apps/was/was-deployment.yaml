@@ -45,7 +45,7 @@ spec:
 
       containers:
       - name: dong-was
-        image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:7a68c68ea42db248cf075ffde504599f799c6add
+        image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:31ca66c31ee1972b0621c4539f4a6631f00a4153
         ports:
         - name: http
           containerPort: 8080
@@ -69,8 +69,8 @@ spec:
               name: mysql-secret
               key: MYSQL_PASSWORD
         - name: dong-was
-          image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:7a68c68ea42db248cf075ffde504599f799c6add
-          image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:${IMAGE_TAG}
+          image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:31ca66c31ee1972b0621c4539f4a6631f00a4153
+          image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:31ca66c31ee1972b0621c4539f4a6631f00a4153
           ports:
             - containerPort: 8080
           volumeMounts:
