@@ -44,7 +44,7 @@ spec:
 
       containers:
         - name: dong-was
-          image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:219f7a2ee8ace40d44b38706a4d899162ee3ff4d
+          image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:$(IMAGE_TAG)
           ports:
             - containerPort: 8080
           volumeMounts:
