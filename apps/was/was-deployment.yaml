@@ -14,63 +14,35 @@ spec:
         app: dong-was
     spec:
       initContainers:
-        - name: make-was-status-page
+        - name: make-was-status
           image: alpine:3.20
           command: ["/bin/sh", "-c"]
           args:
             - |
-              apk add --no-cache busybox-extras >/dev/null 2>&1 || true
-              DB_HOST="mysql"
-              DB_PORT="3306"
-              STATUS="FAIL"
-              if nc -z -w 2 "${DB_HOST}" "${DB_PORT}"; then
-                STATUS="OK"
-              fi
-
-              cat > /usr/local/tomcat/webapps/ROOT/index.html <<EOF
-              <!DOCTYPE html>
-              <html>
-              <head><meta charset="UTF-8"><title>WAS</title></head>
-              <body>
-                <h1>WAS SERVER (Tomcat)</h1>
-                <p>DB Connection (port check): <b>${STATUS}</b></p>
-                <p>DB Target: ${DB_HOST}:${DB_PORT}</p>
-              </body>
-              </html>
-              EOF
+              apk add --no-cache bash >/dev/null 2>&1 || true
+              cp /scripts/make-status-page.sh /tmp/make-status-page.sh
+              chmod +x /tmp/make-status-page.sh
+              /tmp/make-status-page.sh || true
+          env:
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: was-config
+                  key: DB_HOST
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: was-config
+                  key: DB_PORT
           volumeMounts:
+            - name: was-scripts
+              mountPath: /scripts
             - name: was-root
               mountPath: /usr/local/tomcat/webapps/ROOT
-    
 
       containers:
-      - name: dong-was
-        image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:31ca66c31ee1972b0621c4539f4a6631f00a4153
-        ports:
-        - name: http
-          containerPort: 8080
-        envFrom:
-        - configMapRef:
-            name: was-config
-        env:
-        - name: DB_NAME
-          valueFrom:
-            secretKeyRef:
-              name: mysql-secret
-              key: MYSQL_DATABASE
-        - name: DB_USER
-          valueFrom:
-            secretKeyRef:
-              name: mysql-secret
-              key: MYSQL_USER
-        - name: DB_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: mysql-secret
-              key: MYSQL_PASSWORD
         - name: dong-was
-          image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:31ca66c31ee1972b0621c4539f4a6631f00a4153
-          image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:31ca66c31ee1972b0621c4539f4a6631f00a4153
+          image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:latest
           ports:
             - containerPort: 8080
           volumeMounts:
@@ -78,5 +50,9 @@ spec:
               mountPath: /usr/local/tomcat/webapps/ROOT
 
       volumes:
+        - name: was-scripts
+          configMap:
+            name: was-config
+            defaultMode: 0755
         - name: was-root
           emptyDir: {}
