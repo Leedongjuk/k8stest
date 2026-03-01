@@ -7,11 +7,6 @@ on:
 permissions:
   contents: write
 
-env:
-  AWS_REGION: ap-northeast-2
-  ECR_REGISTRY: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com
-  ECR_REPOSITORY: dong/dongtest
-
 jobs:
   build_push_gitops:
     runs-on: self-hosted
@@ -23,45 +18,48 @@ jobs:
       - name: Set image tag (commit SHA)
         shell: powershell
         run: |
-          "IMAGE_TAG=$env:GITHUB_SHA" | Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
+          "IMAGE_TAG=$env:GITHUB_SHA" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
 
-      - name: Configure AWS credentials
+      - name: Configure AWS credentials (Access Key)
         shell: powershell
         run: |
           aws configure set aws_access_key_id "${{ secrets.AWS_ACCESS_KEY_ID }}"
           aws configure set aws_secret_access_key "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-          aws configure set default.region "${{ env.AWS_REGION }}"
-
-      - name: Verify AWS account (debug)
-        shell: powershell
-        run: |
-          aws sts get-caller-identity
-          aws ecr describe-repositories --region $env:AWS_REGION --repository-names "${{ env.ECR_REPOSITORY }}"
+          aws configure set default.region "ap-northeast-2"
 
       - name: Login to ECR
-        uses: aws-actions/amazon-ecr-login@v2
+        shell: powershell
+        run: |
+          aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com
 
       - name: Build & Push image to ECR
         shell: powershell
         run: |
-          docker version
-          docker build -f Dockerfile.dockerfile -t $env:ECR_REGISTRY/${{ env.ECR_REPOSITORY }}:$env:IMAGE_TAG .
-          docker push $env:ECR_REGISTRY/${{ env.ECR_REPOSITORY }}:$env:IMAGE_TAG
+          docker build -f Dockerfile.dockerfile -t 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:$env:IMAGE_TAG .
+          docker push 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:$env:IMAGE_TAG
 
-      # 아래는 필요 시 다시 활성화
       - name: Update manifest image tag (GitOps)
         shell: powershell
         run: |
           $file = "apps/was/was-deployment.yaml"
           $content = Get-Content $file -Raw
-          $new = $content -replace "\(IMAGE_TAG\)", "$env:IMAGE_TAG"
+          $pattern = "401670234592\.dkr\.ecr\.ap-northeast-2\.amazonaws\.com/dong/dongtest:[^\s`"]+"
+          $replace = "401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:$env:IMAGE_TAG"
+          $new = [regex]::Replace($content, $pattern, $replace)
           Set-Content -Path $file -Value $new -NoNewline
-      
+
       - name: Commit & push manifest update
         shell: powershell
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@users.noreply.github.com"
           git add apps/was/was-deployment.yaml
+
+          git diff --cached --quiet
+          if ($LASTEXITCODE -eq 0) {
+            Write-Host "No changes to commit"
+            exit 0
+          }
+
           git commit -m "chore(gitops): deploy $env:IMAGE_TAG"
-          git push
+          git push origin main
