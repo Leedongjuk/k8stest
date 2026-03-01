@@ -13,7 +13,7 @@ spec:
       labels:
         app: dong-was
     spec:
-      # 1) initContainer가 ROOT/index.html을 만들어둠
+      # 1) initContainer가 ROOT/index.html??만들?�둠
       initContainers:
         - name: make-was-status-page
           image: alpine:3.20
@@ -43,11 +43,11 @@ spec:
             - name: was-root
               mountPath: /usr/local/tomcat/webapps/ROOT
 
-      # 2) 실제 WAS 컨테이너 (Tomcat)
+      # 2) ?�제 WAS 컨테?�너 (Tomcat)
       containers:
 <<<<<<< HEAD
       - name: dong-was
-        image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:d602bfef5fff53db7071673e3b890946e67ca594
+        image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:7a68c68ea42db248cf075ffde504599f799c6add
         ports:
         - name: http
           containerPort: 8080
@@ -72,16 +72,16 @@ spec:
               key: MYSQL_PASSWORD
 =======
         - name: dong-was
-          # ✅ 여기만 네 ECR 이미지로 바꿔줘
-          # 예: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:4551b17...
-          image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:${IMAGE_TAG}
+          # ???�기�???ECR ?��?지�?바꿔�?
+          # ?? 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:7a68c68ea42db248cf075ffde504599f799c6add
+          image: 401670234592.dkr.ecr.ap-northeast-2.amazonaws.com/dong/dongtest:7a68c68ea42db248cf075ffde504599f799c6add
           ports:
             - containerPort: 8080
           volumeMounts:
             - name: was-root
               mountPath: /usr/local/tomcat/webapps/ROOT
 
-      # 3) initContainer가 만든 파일을 WAS 컨테이너가 그대로 사용
+      # 3) initContainer가 만든 ?�일??WAS 컨테?�너가 그�?�??�용
       volumes:
         - name: was-root
           emptyDir: {}
